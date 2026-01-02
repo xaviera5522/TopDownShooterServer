@@ -11,13 +11,13 @@ const INACTIVE_TIMEOUT_MINUTES = 3.0
 
 type Session struct {
 	id       string
-	user     *user.User
+	user_id  string
 	lastTime time.Time
 }
 
 func newSession(user *user.User) *Session {
 	return &Session{
-		user:     user,
+		user_id:  user.id,
 		id:       uuid.NewString(),
 		lastTime: time.Now(),
 	}

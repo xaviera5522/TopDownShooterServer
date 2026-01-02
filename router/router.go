@@ -10,7 +10,8 @@ type Router struct {
 
 func newRouter() *Router {
 	router := &Router{}
-	//Bins Services here: router.routes.Store()
+	//Bind Services here:
+	//router.routes.Store("sessions/start", *session.Handler)
 
 	return router
 }

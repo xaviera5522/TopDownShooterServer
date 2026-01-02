@@ -1,6 +1,7 @@
 package game
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/google/uuid"
@@ -33,4 +34,5 @@ func (g *GameServer) GameLLogic() {
 		time.Sleep(time.Duration(sleep_duration))
 		delta_time = time.Since(frame_start)
 	}
+	fmt.Println("DEBUG: ", delta_time)
 }
